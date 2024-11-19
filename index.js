@@ -2,7 +2,6 @@ const express = require("express");
 require("dotenv").config()
 const mongoose = require("mongoose");
 const path = require("path");
-const port = 3015;
 
 const app = express();
 
@@ -71,7 +70,7 @@ app.post('/booking', async (req,res) => {
 
 })
 
-app.listen(port, (req, res) => {
-  console.log(`server is listening on port http://localhost:${port}`);
+app.listen(process.env.PORT, (req, res) => {
+  console.log(`server is listening on port http://localhost:${process.env.PORT}`);
 });
 
